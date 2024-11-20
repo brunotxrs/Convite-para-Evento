@@ -1,0 +1,36 @@
+.container {
+    margin-top: 20px;
+    max-height: 650px;
+    width: 80%;
+    max-width: 900px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: transparent;
+    background: #808080a1;
+    background-clip: text;
+    letter-spacing: .25rem;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}

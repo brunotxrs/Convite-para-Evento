@@ -1,0 +1,38 @@
+/* seção preview */
+
+.preview-section {
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+
+}
+
+.preview {
+    width: 778px;
+    height: 183px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.preview .titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.preview .detalhes {
+    font-size: 1.2rem;
+    margin: 8px 0;
+}
+
+.preview .detalhes span {
+    font-weight: bold;
+}
+

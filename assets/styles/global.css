@@ -1,0 +1,40 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+
+
+:root {
+    --font-family: "Libre Baskerville", serif;
+    --text-primary: #ccc;
+    --text-secondary: #A8A29E;
+    --text-tertiary: #8F8881;
+    --text-highlight: #E43A12;
+    --surface-primary: #FFFFFF;
+    --stroke-default: #D6D3D1;
+    --stroke-highlight: #6494ed71;
+
+}
+
+body {
+    
+    font-family: var(--font-family);
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+
+main {
+    display: grid;
+    grid-template-rows: auto auto auto; /* Define 3 linhas, com altura automática */
+    gap: 1rem; /* Espaço entre os itens */
+}
+  

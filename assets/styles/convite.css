@@ -1,57 +1,125 @@
+/* Seção do Convite */
 .invite-section {
     display: grid;
     justify-content: center;
-    padding: 20px;
+    padding: 1.25rem;
     background-color: #f1f1f1;
-    border-radius: 10px;
+    border-radius: .63rem;
+    margin-bottom: 20px;
 }
 
+/* Container do Convite */
 .convite {
-    width: 778px;
-    height: 183px;
-    padding: 20px;
+    width: 100%; /* Ajuste para ser responsivo */
+    max-width: 48rem; /* Largura máxima */
+    height: auto; /* Ajusta altura conforme o conteúdo */
+    padding: 1.25rem;
     text-align: center;
     border: 1px solid #ddd;
-    padding: 20px;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: .63rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: 0 auto; /* Centraliza a caixa */
 }
 
+/* Título do Convite */
 .titulo {
     font-size: 2rem;
-    font-weight: bold;
-    color: #4CAF50;
-    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: transparent;
+    background: #808080a1;
+    background-clip: text;
+    letter-spacing: .25rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra para legibilidade */
 }
 
+/* Detalhes do Convite */
 .detalhes {
     font-size: 1.2rem;
-    margin: 8px 0;
+    margin: .5rem 0;
+    color: #333; /* Cor escura para melhorar a legibilidade */
+    text-align: left; /* Alinha os detalhes à esquerda */
 }
 
-
 /* Estilos adicionais para os botões de compartilhamento */
-.social-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 12px;
-    /* background-color: #3b5998; */
-     /* Facebook */
+#download-btn {
+    grid-row: 2;                  /* Coloca o botão na segunda linha */
+    justify-self: center;         /* Centraliza o botão horizontalmente */
+    margin-top: 20px; 
+    margin-bottom: 10px;
+} 
+
+.social{
+    display: flex;              /* Aplica flexbox */
+    justify-content: center;    /* Centraliza os itens horizontalmente */
+    align-items: center;
+
+}
+
+#social-btn {
+    gap: 10px;                  /* Espaçamento entre os botões */
+    margin-top: 1.25rem;           /* Um pouco de espaço acima */
+    padding: .5rem .75rem;
     color: white;
-    font-size: 14px;
+    font-size: .94rem;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: .31rem;
     width: auto;
     text-align: center;
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+#share-facebook:hover {
+    filter: drop-shadow(0 0 .3rem #1877F2);
+    z-index: 2;
+}
+
+#share-instagram:hover {
+        filter: drop-shadow(0 0 .3rem rgba(155, 77, 202, 0.6)) 
+                drop-shadow(0 0 .3rem rgba(247, 119, 55, 0.6))
+                drop-shadow(0 0 .3rem rgba(252, 175, 69, 0.6));
+        z-index: 2;
+        transition: filter 0.3s ease-in-out;
+}
+
+#share-whatsapp:hover {
+    filter: drop-shadow(0 0 .3rem rgba(0, 200, 83, 0.6)) /* sombra verde */
+            drop-shadow(0 0 .3rem rgba(37, 211, 102, 0.6)); /* sombra verde mais clara */
+    z-index: 2;
+    transition: filter 0.3s ease-in-out;
 }
 
 .social-btn img {
     width: 1.5rem;
     height: 1.5rem;
     vertical-align: middle;
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
 }
 
-
+/* Quando houver múltiplos botões de compartilhamento, adiciona mais espaçamento */
 .social-btn + .social-btn {
-    margin-top: 15px;
+    margin-top: .94rem;
+}
+
+/* Responsividade - Ajustes em telas menores */
+@media (max-width: 600px) {
+    .convite {
+        width: 90%; /* Aumenta a largura da área do convite em telas pequenas */
+        padding: 1rem; /* Ajusta o padding */
+    }
+
+    .titulo {
+        font-size: 1.5rem; /* Reduz o tamanho do título em telas menores */
+    }
+
+    .detalhes {
+        font-size: 1rem; /* Reduz o tamanho do texto dos detalhes */
+    }
+
+    .social-btn {
+        padding: .4rem .5rem; /* Ajusta o tamanho do botão */
+        font-size: .85rem; /* Ajusta o tamanho da fonte */
+    }
 }

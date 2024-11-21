@@ -1,8 +1,10 @@
 .form-section {
+    display: grid;
+    grid-template-rows: 6fr auto;
     margin-bottom: 1.88rem;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+    height: 100%;                  /* Garante que o form ocupe a altura total da tela */
+    justify-items: center;         /* Centraliza o conteúdo horizontalmente */
+    align-items: flex-start;       
 }
 
 /* Nome do Evento / Data do Evento / Local do Evento */
@@ -202,8 +204,6 @@ input[type="date"] {
 }
 
 
-
-
 .text-options {
     display: grid;
     gap: 1rem;
@@ -233,14 +233,15 @@ input[type="date"] {
 }
 
 
-
-.button {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
+#gerar-btn {
+    grid-row: 2;
+    justify-self: center;
+    margin-top: 20px;
 }
 
 button {
+    display: grid;
+
     width: 15.63rem;
     justify-content: center;
     align-items: center;

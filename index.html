@@ -72,7 +72,7 @@
                             <label for="color">Cor de Fundo:</label>
                             <div class="color">
                                 <div class="img" id="color-picker-btn-background"></div> <!-- Alterado para ID único -->
-                                <input type="color" id="cor" style="display: none;" />
+                                <input type="color" id="cor" style="display: none;" value="#ffffff" />
                             </div>
                         </div>
                         
@@ -109,7 +109,8 @@
                         
                     </div>
 
-                    
+                    <!-- Area do botão pra gerar o convite -->
+                        <button type="submit" id="gerar-btn">Gerar Convite</button>
                 </form>
                 
 
@@ -128,10 +129,7 @@
                 </div>
             </section>
 
-            <!-- Area do botão pra gerar o convite -->
-            <div class="button">
-                <button type="submit">Gerar Convite</button>
-            </div>
+         
 
             
             <section class="invite-section">
@@ -152,12 +150,15 @@
 
                 <button id="download-btn" style="display:none;">Baixar Convite</button>
 
-                <!-- Botões de Compartilhamento nas Redes Sociais -->
+                <div class="social">
+                    <!-- Botões de Compartilhamento nas Redes Sociais -->
                 <div id="social-buttons" style="display:none;">
                     <a id="share-facebook" href="#" target="_blank" class="social-btn"><img src="./assets/icons/facebook.svg" alt="icone do facebook"></a>
                     <a id="share-instagram" href="#" target="_blank" class="social-btn"><img src="./assets/icons/instagram.svg" alt="cone do instagram"></a>
                     <a id="share-whatsapp" href="#" target="_blank" class="social-btn"><img src="./assets/icons/whatsapp.svg" alt="icone do whatsapp"></a>
                 </div>
+                </div>
+                
             </section>
         </main>
 
@@ -166,7 +167,6 @@
         </footer>
     </div>
 
-    <script src="./assets/js/preview.js"></script>
     <script src="./assets/js/action.js"></script>
     
 </body>

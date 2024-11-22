@@ -1,3 +1,11 @@
+// Função para carregar a fonte do Google Fonts dinamicamente
+function loadGoogleFont(font) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `https://fonts.googleapis.com/css2?family=${font.replace(/\s+/g, '+')}:wght@400;700&display=swap`;
+    document.head.appendChild(link);
+}
+
 // Função para atualizar a área de pré-visualização
 function atualizarPreview() {
     const nome = document.getElementById('nome').value;
@@ -50,18 +58,14 @@ function atualizarPreview() {
 }
 
 // Adiciona eventos de input para atualizar o preview em tempo real
-document.getElementById('nome').addEventListener('input', atualizarPreview);
-document.getElementById('data').addEventListener('input', atualizarPreview);
-document.getElementById('local').addEventListener('input', atualizarPreview);
-document.getElementById('text').addEventListener('input', atualizarPreview);
-document.getElementById('cor').addEventListener('input', atualizarPreview);
-document.getElementById('text-color').addEventListener('input', atualizarPreview);
-document.getElementById('font-family').addEventListener('change', atualizarPreview);
-document.getElementById('google-font').addEventListener('input', atualizarPreview); // Adiciona evento para o campo Google Fonts
-document.getElementById('fundo').addEventListener('change', atualizarPreview);
+const inputs = document.querySelectorAll('#nome, #data, #local, #text, #cor, #text-color, #font-family, #google-font, #fundo');
+inputs.forEach(input => {
+    input.addEventListener('input', atualizarPreview);
+});
 
 // Chama a função para preencher o preview ao carregar a página (caso haja dados prévios)
 window.addEventListener('load', atualizarPreview);
+
 
 
 
@@ -124,7 +128,6 @@ document.getElementById('form').addEventListener('submit', function(event) {
     document.getElementById('social-buttons').style.display = 'block';
 });
 
-
 // Função para baixar o convite como imagem (usando Canvas)
 document.getElementById('download-btn').addEventListener('click', function() {
     const canvas = document.getElementById('canvas');
@@ -136,29 +139,44 @@ document.getElementById('download-btn').addEventListener('click', function() {
     canvas.height = convite.offsetHeight;
 
     // Desenhar o conteúdo do convite no canvas
-    
     context.fillStyle = convite.style.backgroundColor;
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     // Se houver uma imagem de fundo, desenha a imagem no canvas
     const backgroundImage = convite.style.backgroundImage;
     if (backgroundImage) {
-        const img = new Image();
-        img.src = backgroundImage.replace('url("', '').replace('")', '');
-        img.onload = function() {
-            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        const urlRegex = /url\(["']?(.*?)["']?\)/;
+        const match = backgroundImage.match(urlRegex);
+        if (match && match[1]) {
+            const img = new Image();
+            img.src = match[1];
+            img.onload = function() {
+                context.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-            // Adiciona o texto sobre a imagem de fundo
-            context.fillStyle = convite.style.color;
-            context.font = '24px ' + convite.style.fontFamily;
-            context.fillText(nome, 50, 50); // Exemplo de texto
+                // Adiciona o texto sobre a imagem de fundo
+                context.fillStyle = convite.style.color;
+                context.font = `24px ${convite.style.fontFamily}`;
+                context.fillText(nome, 50, 50); // Exemplo de texto
 
-            // Baixar a imagem gerada
-            const link = document.createElement('a');
-            link.href = canvas.toDataURL('image/png');
-            link.download = 'convite.png';
-            link.click();
-        };
+                // Baixar a imagem gerada
+                const link = document.createElement('a');
+                link.href = canvas.toDataURL('image/png');
+                link.download = 'convite.png';
+                link.click();
+            };
+        }
+    }
+
+    // Caso contrário, apenas desenha o texto
+    else {
+        context.fillStyle = convite.style.color;
+        context.font = `24px ${convite.style.fontFamily}`;
+        context.fillText(nome, 50, 50); // Exemplo de texto
+
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'convite.png';
+        link.click();
     }
 });
 
@@ -181,7 +199,7 @@ document.getElementById('share-whatsapp').addEventListener('click', function(e) 
     e.preventDefault();
     const text = encodeURIComponent(`Convite para o evento "${document.getElementById('evento-nome').textContent}"`);
     const url = encodeURIComponent(window.location.href);
-    window.open(`https://api.whatsapp.com/send?text=${text} ${url}`, '_blank');
+    window.open(`https://wa.me/?text=${text} ${url}`, '_blank');
 });
 
 // Mostrar o seletor de cor quando clicar na paleta de cores para a cor de fundo
@@ -209,5 +227,3 @@ document.getElementById('text-color').addEventListener('input', function() {
     const convite = document.getElementById('convite');
     convite.style.color = textColorSelecionada;
 });
-
-

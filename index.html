@@ -68,22 +68,24 @@
 
                     <div class="grid">
 
+                        <!-- Cor de Fundo -->
                         <div class="color cor">
                             <label for="color">Cor de Fundo:</label>
                             <div class="color">
-                                <div class="img" id="color-picker-btn-background"></div> <!-- Alterado para ID único -->
-                                <input type="color" id="cor" style="display: none;" value="#ffffff" />
+                                <div class="img" id="color-picker-btn-background"></div>
+                                <input type="color" id="cor" name="cor" style="display: none;" value="#ffffff" />
                             </div>
                         </div>
-                        
-                        <!-- Seleção de cor do texto -->
+
+                        <!-- Cor do Texto -->
                         <div class="color cor">
                             <label for="text-color">Cor do Texto:</label>
                             <div class="color">
-                                <div class="img" id="color-picker-btn-text"></div> <!-- Alterado para ID único -->
-                                <input type="color" id="text-color" style="display: none;" />
+                                <div class="img" id="color-picker-btn-text"></div>
+                                <input type="color" id="text-color" name="text-color" style="display: none;" />
                             </div>
                         </div>
+
                         
                     
                         <!-- Seleção de fonte do texto -->
@@ -166,7 +168,6 @@
             <p>&copy; 2024 Convites Criativos</p>
         </footer>
     </div>
-
     <script src="./assets/js/action.js"></script>
     
 </body>

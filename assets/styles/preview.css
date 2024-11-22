@@ -33,19 +33,15 @@
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 900;
-    color: transparent;
-    background: #808080a1;
-    background-clip: text;
     letter-spacing: .25rem;
     margin-bottom: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra para melhorar a visibilidade */
+   
 }
 
 /* Estilo dos detalhes na pré-visualização */
 .preview .detalhes {
     font-size: 1.2rem;
     margin: .5rem 0;
-    color: #333; /* Cor mais escura para texto */
     text-align: left; /* Alinha o texto à esquerda */
 }
 

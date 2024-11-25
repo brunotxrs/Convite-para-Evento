@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img alt="Projeto Convite para Evento" src="./assets/img/capa.jpeg" width="100%">
+  <img alt="Projeto Convite para Evento" src="./assets/img/convite.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias

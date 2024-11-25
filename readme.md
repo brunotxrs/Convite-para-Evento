@@ -28,7 +28,7 @@ Este projeto, desenvolvido com as tecnologias HTML, CSS e JavaScript, oferece um
 
 O gerador de convites personalizados é um projeto versátil e prático que demonstra a aplicação das tecnologias HTML, CSS e JavaScript na criação de ferramentas web interativas e personalizadas. Ao permitir que os usuários criem convites únicos e exclusivos, este projeto oferece uma solução simples e eficaz para uma necessidade comum.
 
-- Acesse o projeto finalizado, [online]()
+- Acesse o projeto finalizado, [online](https://brunotxrs.github.io/Convite-para-Evento/)
 
 ---
 

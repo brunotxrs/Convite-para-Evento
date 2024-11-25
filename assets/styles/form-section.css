@@ -202,6 +202,11 @@ input[type="date"] {
     cursor: pointer; /* Muda o cursor para uma mão */
     margin-bottom: .63rem ;
 }
+.tree {
+    width: 60px;
+   
+    
+}
 
 
 .text-options {
@@ -227,10 +232,17 @@ input[type="date"] {
 }
 
 .text-options label {
-    font-size: 1rem;
+    
+    font-size: .5rem;
     font-weight: bold;
     margin-bottom: .31rem;
 }
+
+label .tree{
+    background-color: aqua;
+    font-size: .8rem;
+}
+
 
 
 #gerar-btn {

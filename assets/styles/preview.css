@@ -50,19 +50,5 @@
     font-weight: bold;
 }
 
-/* Responsividade - Ajuste em telas menores */
-@media (max-width: 600px) {
-    .preview {
-        width: 90%; /* Aumenta a largura em telas menores */
-        padding: 1rem; /* Ajusta o padding */
-    }
 
-    .preview .titulo {
-        font-size: 1.5rem; /* Reduz o tamanho do título em telas menores */
-    }
-
-    .preview .detalhes {
-        font-size: 1rem; /* Reduz o tamanho dos detalhes */
-    }
-}
 

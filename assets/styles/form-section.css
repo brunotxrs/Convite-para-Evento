@@ -61,7 +61,7 @@ input[type="date"] {
 /* area Imagem de Fundo */
 .add-estilos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: .63rem;
 }
 

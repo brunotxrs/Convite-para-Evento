@@ -100,23 +100,4 @@
     margin-top: .94rem;
 }
 
-/* Responsividade - Ajustes em telas menores */
-@media (max-width: 600px) {
-    .convite {
-        width: 90%; /* Aumenta a largura da área do convite em telas pequenas */
-        padding: 1rem; /* Ajusta o padding */
-    }
 
-    .titulo {
-        font-size: 1.5rem; /* Reduz o tamanho do título em telas menores */
-    }
-
-    .detalhes {
-        font-size: 1rem; /* Reduz o tamanho do texto dos detalhes */
-    }
-
-    .social-btn {
-        padding: .4rem .5rem; /* Ajusta o tamanho do botão */
-        font-size: .85rem; /* Ajusta o tamanho da fonte */
-    }
-}

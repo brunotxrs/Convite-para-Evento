@@ -1,0 +1,106 @@
+@media(max-width: 23.44rem){
+    body{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 23.13rem;
+        height: 100vh;
+
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    .container{
+        display: grid;
+       
+        justify-content: center;
+        align-items: center;
+        
+        width: 29rem;
+
+        padding: .31rem;
+       
+        margin-left: 7.5rem;
+          
+    }
+    
+    & header h1{
+        font-size: 1rem;
+        
+    }
+    
+    & main {
+        width: 100%;    
+    }
+    
+    & .form-section{
+        width: 31.25rem;
+    }
+    
+    & .form-section h2 {
+        font-size: 1rem;
+    }
+    
+    & .informacoes{
+        width: 28.13rem;
+
+            &::placeholder {
+                font-size: small;                
+            }                
+    }
+        
+    & .add-estilos {
+        width: 28.13rem;
+    
+        & svg{
+            width: 2rem;
+            height: 2rem;
+        }
+    
+        & .image{
+            height: 9.38rem;
+        }
+    
+        & p{
+            font-size: small;
+           
+        }
+       
+    }
+    
+    & .styles{
+        height: 9.38rem;
+        overflow: hidden;
+    
+        &::placeholder {
+            font-size: small;             
+           }                
+    }
+    
+    & .grid {
+        width: 28.3rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px .63rem;
+        margin: 0;
+    }
+
+    .preview-section, .invite-section {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 28.3rem;
+        margin-left: 1.25rem;
+    }
+
+    .preview-section h2, .invite-section h2{
+        font-size: small;
+    }
+    .preview-section .titulo,  .invite-section .titulo{
+        font-size: small;
+    }
+    .preview-section .detalhes, .invite-section .detalhes{
+        font-size: small;
+    }
+
+}
